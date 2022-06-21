@@ -303,7 +303,7 @@ def mix_colors(mix_list):
 
     for potential_color in xterm_color_data:
         hsl = potential_color.get('hsl')
-        if hsl.get('h') in range(hue_min, round(new_hue + 10)):
+        if hsl.get('h') in range(hue_min, min(round(new_hue + 10), 360)):
             # Ensure you're only adding closer matches
             temp_saturation_diff = abs(hsl.get('s') - new_sat)
             if temp_saturation_diff > saturation_diff:
