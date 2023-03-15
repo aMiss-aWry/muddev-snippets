@@ -1,13 +1,12 @@
 import math
 
-xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 0, "l": 0}, "name": "Too Black"},
-                    {"colorId": "R", "hexString": "#800000", "rgb": {"r": 128, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 100, "l": 25}, "name": "Maroon"},
+xterm_color_data = [{"colorId": "R", "hexString": "#800000", "rgb": {"r": 128, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 100, "l": 25}, "name": "Maroon"},
                     {"colorId": "G", "hexString": "#008000", "rgb": {"r": 0, "g": 128, "b": 0}, "hsl": {"h": 120, "s": 100, "l": 25}, "name": "Green"},
                     {"colorId": "Y", "hexString": "#808000", "rgb": {"r": 128, "g": 128, "b": 0}, "hsl": {"h": 60, "s": 100, "l": 25}, "name": "Olive"},
                     {"colorId": "B", "hexString": "#000080", "rgb": {"r": 0, "g": 0, "b": 128}, "hsl": {"h": 240, "s": 100, "l": 25}, "name": "Dark blue"},
                     {"colorId": "M", "hexString": "#800080", "rgb": {"r": 128, "g": 0, "b": 128}, "hsl": {"h": 300, "s": 100, "l": 25}, "name": "Purple"},
                     {"colorId": "C", "hexString": "#008080", "rgb": {"r": 0, "g": 128, "b": 128}, "hsl": {"h": 180, "s": 100, "l": 25}, "name": "Teal"},
-                    {"colorId": "w", "hexString": "#c0c0c0", "rgb": {"r": 192, "g": 192, "b": 192}, "hsl": {"h": 0, "s": 0, "l": 75}, "name": "Silver"},
+                    {"colorId": "w", "hexString": "#c0c0c0", "rgb": {"r": 192, "g": 192, "b": 192}, "hsl": {"h": 0, "s": 0, "l": 75}, "name": "White"},
                     {"colorId": "x", "hexString": "#808080", "rgb": {"r": 128, "g": 128, "b": 128}, "hsl": {"h": 0, "s": 0, "l": 50}, "name": "Grey"},
                     {"colorId": "r", "hexString": "#ff0000", "rgb": {"r": 255, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 100, "l": 50}, "name": "Red"},
                     {"colorId": "g", "hexString": "#00ff00", "rgb": {"r": 0, "g": 255, "b": 0}, "hsl": {"h": 120, "s": 100, "l": 50}, "name": "Lime"},
@@ -16,7 +15,7 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "m", "hexString": "#ff00ff", "rgb": {"r": 255, "g": 0, "b": 255}, "hsl": {"h": 300, "s": 100, "l": 50}, "name": "Fuchsia"},
                     {"colorId": "c", "hexString": "#00ffff", "rgb": {"r": 0, "g": 255, "b": 255}, "hsl": {"h": 180, "s": 100, "l": 50}, "name": "Aqua"},
                     {"colorId": "w", "hexString": "#ffffff", "rgb": {"r": 255, "g": 255, "b": 255}, "hsl": {"h": 0, "s": 0, "l": 100}, "name": "White"},
-                    {"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 0, "l": 0}, "name": "Too Black"},
+                    {"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 0, "l": 0}, "name": "Vantablack"},
                     {"colorId": "001", "hexString": "#00005f", "rgb": {"r": 0, "g": 0, "b": 95}, "hsl": {"h": 240, "s": 100, "l": 18}, "name": "Midnight blue"},
                     {"colorId": "002", "hexString": "#000087", "rgb": {"r": 0, "g": 0, "b": 135}, "hsl": {"h": 240, "s": 100, "l": 26}, "name": "Indigo"},
                     {"colorId": "003", "hexString": "#0000af", "rgb": {"r": 0, "g": 0, "b": 175}, "hsl": {"h": 240, "s": 100, "l": 34}, "name": "Lapis lazuli"},
@@ -112,7 +111,7 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "233", "hexString": "#87afaf", "rgb": {"r": 135, "g": 175, "b": 175}, "hsl": {"h": 180, "s": 20, "l": 60}, "name": "Tourmaline"},
                     {"colorId": "234", "hexString": "#87afd7", "rgb": {"r": 135, "g": 175, "b": 215}, "hsl": {"h": 210, "s": 50, "l": 68}, "name": "Iceberg"},
                     {"colorId": "235", "hexString": "#87afff", "rgb": {"r": 135, "g": 175, "b": 255}, "hsl": {"h": 220, "s": 100, "l": 76}, "name": "Hazy blue"},
-                    {"colorId": "240", "hexString": "#87d700", "rgb": {"r": 135, "g": 215, "b": 0}, "hsl": {"h": 82.3255813953488, "s": 100, "l": 42}, "name": "Jaundice green"},
+                    {"colorId": "240", "hexString": "#87d700", "rgb": {"r": 135, "g": 215, "b": 0}, "hsl": {"h": 82.3255813953488, "s": 100, "l": 42}, "name": "Absinthe green"},
                     {"colorId": "241", "hexString": "#87d75f", "rgb": {"r": 135, "g": 215, "b": 95}, "hsl": {"h": 100, "s": 60, "l": 60}, "name": "Lichen"},
                     {"colorId": "242", "hexString": "#87d787", "rgb": {"r": 135, "g": 215, "b": 135}, "hsl": {"h": 120, "s": 50, "l": 68}, "name": "Celadon"},
                     {"colorId": "243", "hexString": "#87d7af", "rgb": {"r": 135, "g": 215, "b": 175}, "hsl": {"h": 150, "s": 50, "l": 68}, "name": "Pastel green"},
@@ -144,12 +143,12 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "325", "hexString": "#af87ff", "rgb": {"r": 175, "g": 135, "b": 255}, "hsl": {"h": 260, "s": 100, "l": 76}, "name": "Wisteria"},
                     {"colorId": "330", "hexString": "#afaf00", "rgb": {"r": 175, "g": 175, "b": 0}, "hsl": {"h": 60, "s": 100, "l": 34}, "name": "Dull earth"},
                     {"colorId": "331", "hexString": "#afaf5f", "rgb": {"r": 175, "g": 175, "b": 95}, "hsl": {"h": 60, "s": 33, "l": 52}, "name": "Pale olive"},
-                    {"colorId": "332", "hexString": "#afaf87", "rgb": {"r": 175, "g": 175, "b": 135}, "hsl": {"h": 60, "s": 20, "l": 60}, "name": "Dusty sage"},
+                    {"colorId": "332", "hexString": "#afaf87", "rgb": {"r": 175, "g": 175, "b": 135}, "hsl": {"h": 60, "s": 20, "l": 60}, "name": "Taupe"},
                     {"colorId": "333", "hexString": "#afafaf", "rgb": {"r": 175, "g": 175, "b": 175}, "hsl": {"h": 0, "s": 0, "l": 68}, "name": "Talc grey"},
                     {"colorId": "334", "hexString": "#afafd7", "rgb": {"r": 175, "g": 175, "b": 215}, "hsl": {"h": 240, "s": 33, "l": 76}, "name": "Nostalgia"},
                     {"colorId": "335", "hexString": "#afafff", "rgb": {"r": 175, "g": 175, "b": 255}, "hsl": {"h": 240, "s": 100, "l": 84}, "name": "Pastel purple"},
-                    {"colorId": "340", "hexString": "#afd700", "rgb": {"r": 175, "g": 215, "b": 0}, "hsl": {"h": 71.1627906976744, "s": 100, "l": 42}, "name": "Putrid green"},
-                    {"colorId": "341", "hexString": "#afd75f", "rgb": {"r": 175, "g": 215, "b": 95}, "hsl": {"h": 80, "s": 60, "l": 60}, "name": "Locust"},
+                    {"colorId": "340", "hexString": "#afd700", "rgb": {"r": 175, "g": 215, "b": 0}, "hsl": {"h": 71.1627906976744, "s": 100, "l": 42}, "name": "Toad green"},
+                    {"colorId": "341", "hexString": "#afd75f", "rgb": {"r": 175, "g": 215, "b": 95}, "hsl": {"h": 80, "s": 60, "l": 60}, "name": "Sage green"},
                     {"colorId": "342", "hexString": "#afd787", "rgb": {"r": 175, "g": 215, "b": 135}, "hsl": {"h": 90, "s": 50, "l": 68}, "name": "Pear green"},
                     {"colorId": "343", "hexString": "#afd7af", "rgb": {"r": 175, "g": 215, "b": 175}, "hsl": {"h": 120, "s": 33, "l": 76}, "name": "Opal"},
                     {"colorId": "344", "hexString": "#afd7d7", "rgb": {"r": 175, "g": 215, "b": 215}, "hsl": {"h": 180, "s": 33, "l": 76}, "name": "Mist blue"},
@@ -192,9 +191,9 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "445", "hexString": "#d7d7ff", "rgb": {"r": 215, "g": 215, "b": 255}, "hsl": {"h": 240, "s": 100, "l": 92}, "name": "Crystal blue"},
                     {"colorId": "450", "hexString": "#d7ff00", "rgb": {"r": 215, "g": 255, "b": 0}, "hsl": {"h": 69.4117647058823, "s": 100, "l": 50}, "name": "Neon yellow"},
                     {"colorId": "451", "hexString": "#d7ff5f", "rgb": {"r": 215, "g": 255, "b": 95}, "hsl": {"h": 75, "s": 100, "l": 68}, "name": "Lemonade"},
-                    {"colorId": "452", "hexString": "#d7ff87", "rgb": {"r": 215, "g": 255, "b": 135}, "hsl": {"h": 80, "s": 100, "l": 76}, "name": "Sunlight"},
+                    {"colorId": "452", "hexString": "#d7ff87", "rgb": {"r": 215, "g": 255, "b": 135}, "hsl": {"h": 80, "s": 100, "l": 76}, "name": "Honeydew"},
                     {"colorId": "453", "hexString": "#d7ffaf", "rgb": {"r": 215, "g": 255, "b": 175}, "hsl": {"h": 90, "s": 100, "l": 84}, "name": "Daisy yellow"},
-                    {"colorId": "454", "hexString": "#d7ffd7", "rgb": {"r": 215, "g": 255, "b": 215}, "hsl": {"h": 120, "s": 100, "l": 92}, "name": "Canvas"},
+                    {"colorId": "454", "hexString": "#d7ffd7", "rgb": {"r": 215, "g": 255, "b": 215}, "hsl": {"h": 120, "s": 100, "l": 92}, "name": "Ivory"},
                     {"colorId": "455", "hexString": "#d7ffff", "rgb": {"r": 215, "g": 255, "b": 255}, "hsl": {"h": 180, "s": 100, "l": 92}, "name": "Frost white"},
                     {"colorId": "500", "hexString": "#ff0000", "rgb": {"r": 255, "g": 0, "b": 0}, "hsl": {"h": 0, "s": 100, "l": 50}, "name": "Red"},
                     {"colorId": "501", "hexString": "#ff005f", "rgb": {"r": 255, "g": 0, "b": 95}, "hsl": {"h": 337.647058823529, "s": 100, "l": 50}, "name": "Watermelon"},
@@ -213,7 +212,7 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "522", "hexString": "#ff8787", "rgb": {"r": 255, "g": 135, "b": 135}, "hsl": {"h": 0, "s": 100, "l": 76}, "name": "Tangerine"},
                     {"colorId": "523", "hexString": "#ff87af", "rgb": {"r": 255, "g": 135, "b": 175}, "hsl": {"h": 340, "s": 100, "l": 76}, "name": "Coral"},
                     {"colorId": "524", "hexString": "#ff87d7", "rgb": {"r": 255, "g": 135, "b": 215}, "hsl": {"h": 320, "s": 100, "l": 76}, "name": "Sherbet"},
-                    {"colorId": "525", "hexString": "#ff87ff", "rgb": {"r": 255, "g": 135, "b": 255}, "hsl": {"h": 300, "s": 100, "l": 76}, "name": "Camellia"},
+                    {"colorId": "525", "hexString": "#ff87ff", "rgb": {"r": 255, "g": 135, "b": 255}, "hsl": {"h": 300, "s": 100, "l": 76}, "name": "Cerise"},
                     {"colorId": "530", "hexString": "#ffaf00", "rgb": {"r": 255, "g": 175, "b": 0}, "hsl": {"h": 41.1764705882353, "s": 100, "l": 50}, "name": "Ochre"},
                     {"colorId": "531", "hexString": "#ffaf5f", "rgb": {"r": 255, "g": 175, "b": 95}, "hsl": {"h": 30, "s": 100, "l": 68}, "name": "Sand"},
                     {"colorId": "532", "hexString": "#ffaf87", "rgb": {"r": 255, "g": 175, "b": 135}, "hsl": {"h": 20, "s": 100, "l": 76}, "name": "Dawn"},
@@ -230,26 +229,26 @@ xterm_color_data = [{"colorId": "000", "hexString": "#000000", "rgb": {"r": 0, "
                     {"colorId": "551", "hexString": "#ffff5f", "rgb": {"r": 255, "g": 255, "b": 95}, "hsl": {"h": 60, "s": 100, "l": 68}, "name": "Lemon"},
                     {"colorId": "552", "hexString": "#ffff87", "rgb": {"r": 255, "g": 255, "b": 135}, "hsl": {"h": 60, "s": 100, "l": 76}, "name": "Canary"},
                     {"colorId": "553", "hexString": "#ffffaf", "rgb": {"r": 255, "g": 255, "b": 175}, "hsl": {"h": 60, "s": 100, "l": 84}, "name": "Vanilla"},
-                    {"colorId": "554", "hexString": "#ffffd7", "rgb": {"r": 255, "g": 255, "b": 215}, "hsl": {"h": 60, "s": 100, "l": 92}, "name": "Ivory"},
+                    {"colorId": "554", "hexString": "#ffffd7", "rgb": {"r": 255, "g": 255, "b": 215}, "hsl": {"h": 60, "s": 100, "l": 92}, "name": "Cream"},
                     {"colorId": "555", "hexString": "#ffffff", "rgb": {"r": 255, "g": 255, "b": 255}, "hsl": {"h": 0, "s": 0, "l": 100}, "name": "White"},
-                    {"colorId": "=a", "hexString": "#080808", "rgb": {"r": 8, "g": 8, "b": 8}, "hsl": {"h": 0, "s": 0, "l": 3}, "name": "Too Black"},
-                    {"colorId": "=b", "hexString": "#121212", "rgb": {"r": 18, "g": 18, "b": 18}, "hsl": {"h": 0, "s": 0, "l": 7}, "name": "Too Black"},
-                    {"colorId": "=c", "hexString": "#1c1c1c", "rgb": {"r": 28, "g": 28, "b": 28}, "hsl": {"h": 0, "s": 0, "l": 10}, "name": "Too Black"},
-                    {"colorId": "=d", "hexString": "#262626", "rgb": {"r": 38, "g": 38, "b": 38}, "hsl": {"h": 0, "s": 0, "l": 14}, "name": "Too Black"},
+                    {"colorId": "=a", "hexString": "#080808", "rgb": {"r": 8, "g": 8, "b": 8}, "hsl": {"h": 0, "s": 0, "l": 3}, "name": "Deep space"},
+                    {"colorId": "=b", "hexString": "#121212", "rgb": {"r": 18, "g": 18, "b": 18}, "hsl": {"h": 0, "s": 0, "l": 7}, "name": "Dark moon"},
+                    {"colorId": "=c", "hexString": "#1c1c1c", "rgb": {"r": 28, "g": 28, "b": 28}, "hsl": {"h": 0, "s": 0, "l": 10}, "name": "Charcoal"},
+                    {"colorId": "=d", "hexString": "#262626", "rgb": {"r": 38, "g": 38, "b": 38}, "hsl": {"h": 0, "s": 0, "l": 14}, "name": "Shadow"},
                     {"colorId": "=e", "hexString": "#303030", "rgb": {"r": 48, "g": 48, "b": 48}, "hsl": {"h": 0, "s": 0, "l": 18}, "name": "Black"},
                     {"colorId": "=f", "hexString": "#3a3a3a", "rgb": {"r": 58, "g": 58, "b": 58}, "hsl": {"h": 0, "s": 0, "l": 22}, "name": "Obsidian"},
                     {"colorId": "=g", "hexString": "#444444", "rgb": {"r": 68, "g": 68, "b": 68}, "hsl": {"h": 0, "s": 0, "l": 26}, "name": "Onyx"},
-                    {"colorId": "=h", "hexString": "#4e4e4e", "rgb": {"r": 78, "g": 78, "b": 78}, "hsl": {"h": 0, "s": 0, "l": 30}, "name": "Charcoal"},
+                    {"colorId": "=h", "hexString": "#4e4e4e", "rgb": {"r": 78, "g": 78, "b": 78}, "hsl": {"h": 0, "s": 0, "l": 30}, "name": "Black"},
                     {"colorId": "=i", "hexString": "#585858", "rgb": {"r": 88, "g": 88, "b": 88}, "hsl": {"h": 0, "s": 0, "l": 34}, "name": "Graphite"},
                     {"colorId": "=j", "hexString": "#626262", "rgb": {"r": 98, "g": 98, "b": 98}, "hsl": {"h": 0, "s": 0, "l": 37}, "name": "Granite grey"},
                     {"colorId": "=k", "hexString": "#6c6c6c", "rgb": {"r": 108, "g": 108, "b": 108}, "hsl": {"h": 0, "s": 0, "l": 40}, "name": "Storm grey"},
-                    {"colorId": "=l", "hexString": "#767676", "rgb": {"r": 118, "g": 118, "b": 118}, "hsl": {"h": 0, "s": 0, "l": 46}, "name": "Nickel"},
-                    {"colorId": "=m", "hexString": "#808080", "rgb": {"r": 128, "g": 128, "b": 128}, "hsl": {"h": 0, "s": 0, "l": 50}, "name": "Grey"},
-                    {"colorId": "=n", "hexString": "#8a8a8a", "rgb": {"r": 138, "g": 138, "b": 138}, "hsl": {"h": 0, "s": 0, "l": 54}, "name": "Grey"},
+                    {"colorId": "=l", "hexString": "#767676", "rgb": {"r": 118, "g": 118, "b": 118}, "hsl": {"h": 0, "s": 0, "l": 46}, "name": "Ash grey"},
+                    {"colorId": "=m", "hexString": "#808080", "rgb": {"r": 128, "g": 128, "b": 128}, "hsl": {"h": 0, "s": 0, "l": 50}, "name": "Pewter"},
+                    {"colorId": "=n", "hexString": "#8a8a8a", "rgb": {"r": 138, "g": 138, "b": 138}, "hsl": {"h": 0, "s": 0, "l": 54}, "name": "Nickel"},
                     {"colorId": "=o", "hexString": "#949494", "rgb": {"r": 148, "g": 148, "b": 148}, "hsl": {"h": 0, "s": 0, "l": 58}, "name": "Grey"},
-                    {"colorId": "=p", "hexString": "#9e9e9e", "rgb": {"r": 158, "g": 158, "b": 158}, "hsl": {"h": 0, "s": 0, "l": 61}, "name": "Grey"},
+                    {"colorId": "=p", "hexString": "#9e9e9e", "rgb": {"r": 158, "g": 158, "b": 158}, "hsl": {"h": 0, "s": 0, "l": 61}, "name": "Smoke"},
                     {"colorId": "=q", "hexString": "#a8a8a8", "rgb": {"r": 168, "g": 168, "b": 168}, "hsl": {"h": 0, "s": 0, "l": 65}, "name": "Dove grey"},
-                    {"colorId": "=r", "hexString": "#b2b2b2", "rgb": {"r": 178, "g": 178, "b": 178}, "hsl": {"h": 0, "s": 0, "l": 69}, "name": "Smoke"},
+                    {"colorId": "=r", "hexString": "#b2b2b2", "rgb": {"r": 178, "g": 178, "b": 178}, "hsl": {"h": 0, "s": 0, "l": 69}, "name": "Light grey"},
                     {"colorId": "=s", "hexString": "#bcbcbc", "rgb": {"r": 188, "g": 188, "b": 188}, "hsl": {"h": 0, "s": 0, "l": 73}, "name": "Quicksilver"},
                     {"colorId": "=t", "hexString": "#c6c6c6", "rgb": {"r": 198, "g": 198, "b": 198}, "hsl": {"h": 0, "s": 0, "l": 77}, "name": "Silver"},
                     {"colorId": "=u", "hexString": "#d0d0d0", "rgb": {"r": 208, "g": 208, "b": 208}, "hsl": {"h": 0, "s": 0, "l": 81}, "name": "Marble"},
@@ -318,5 +317,54 @@ def mix_colors(mix_list):
             closest_match = potential_color.get('name')
             color_code = potential_color.get('colorId')
             potential_color_names += closest_match
-
+    # If there is no closest match, go with a random olive.
+    if not closest_match:
+        return "Olive", "Y"
     return closest_match, color_code
+
+def add_colors_rgb(rgbA, rgbB):
+    # from Inspector Caracal
+    # adds one color to another already-colored thing
+    pigmentA = (255-rgbA[0], 255-rgbA[1], 255-rgbA[2])
+    pigmentB = (255-rgbB[0], 255-rgbB[1], 255-rgbB[2])
+    
+    cyan = round( max( (pigmentA[0]+pigmentB[0])/2, pigmentA[0] ) )
+    mag  = round( max( (pigmentA[1]+pigmentB[1])/2, pigmentA[1] ) )
+    yel  = round( max( (pigmentA[2]+pigmentB[2])/2, pigmentA[2] ) )
+ 
+    return (255-cyan, 255-mag, 255-yel)
+
+def mix_colors_rgb(rgbA, rgbB, numfirst=1, numsecond=1):
+    # from Inspector Caracal
+    # mixes two sets of pigments based on RGB
+    pigmentA = (255-rgbA[0], 255-rgbA[1], 255-rgbA[2])
+    pigmentB = (255-rgbB[0], 255-rgbB[1], 255-rgbB[2])
+    
+    cyan = round( (pigmentA[0]*numfirst + pigmentB[0]*numsecond)/(numfirst+numsecond) )
+    mag  = round( (pigmentA[1]*numfirst + pigmentB[1]*numsecond)/(numfirst+numsecond) )
+    yel  = round( (pigmentA[2]*numfirst + pigmentB[2]*numsecond)/(numfirst+numsecond) )
+    
+    return (255-cyan, 255-mag, 255-yel)
+
+def get_color_name_by_code(color_code):
+    color_code = str(color_code)
+    for c in xterm_color_data:
+        if c.get('name') == color_code.capitalize() or c.get('colorId') == color_code:
+            return f"|{c.get('colorId')}{c.get('name').lower()}|n"
+
+def describe_color(color_code):
+    color_code = str(color_code)
+    color_desc = "It is drab and not particularly colorful."
+    for c in xterm_color_data:
+        if c.get('name') == color_code.capitalize() or c.get('colorId') == color_code:
+            rgb = c.get('rgb')
+            rgb_average = round((rgb.get('r') + rgb.get('g') + rgb.get('b')) / 3)
+            hsl = c.get('hsl')
+            saturation = hsl.get('s')
+            lightness = hsl.get('l')
+            if rgb_average <= 80 or lightness < 35 or (saturation < 20 and lightness < 50):
+                color_desc = f"It possesses a dark |{c.get('colorId')}{c.get('name').lower()}|n hue."
+            else:
+                color_desc = f"It possesses a bright |{c.get('colorId')}{c.get('name').lower()}|n hue."
+            break
+    return color_desc
