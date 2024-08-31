@@ -42,7 +42,6 @@ class CmdRevise(Command):
         caller = self.caller
         location = self.caller.location
         args = self.args.strip()
-        target = location if self.args == "here" else None
 
         if not args:
             caller.msg("Usage: revise <target> <typo>=<correction>")
@@ -50,13 +49,12 @@ class CmdRevise(Command):
         
         # This part is gross.
         split_args_space = args.split(" ")
+        target_name = split_args_space[0]
+        target = caller.search(target_name)
         if not target:
-            target_name = split_args_space[0]
-            target = caller.search(target_name)
-            if not target:
-                return
-            args = args.replace(target_name, "", 1)
-            args = args.strip()
+            return
+        args = args.replace(target_name, "", 1)
+        args = args.strip()
 
         try:
             old_typo, new_fix = map(str.strip, args.split("=", 1))
