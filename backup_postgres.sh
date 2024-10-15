@@ -1,15 +1,25 @@
 #!/bin/bash
+# Backup script for postgresql db
 
-# A useful script for backing up your postgres database to git
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 <OUTPUT_FOLDER> <DB_NAME> <DB_USER>"
+    exit 1
+fi
 
-# Variables
-DB_NAME="your db name"
-DB_USER="your db user"
-OUTPUT_FILE="backup.sql"
+OUTPUT_FOLDER=$1
+DB_NAME=$2
+DB_USER=$3
+
+OUTPUT_FILE=$(date +"%Y-%m-%d.%H_%M_%S.sql")
+OUTPUT_FILE_PATH="$OUTPUT_FOLDER/$OUTPUT_FILE"
+
+mkdir -p $OUTPUT_FOLDER
 
 # Dump the database
-pg_dump -U $DB_USER -W -F p $DB_NAME > $OUTPUT_FILE
+pg_dump -U $DB_USER -W -F p $DB_NAME > $OUTPUT_FILE_PATH
 
-# Add the dump to Git
-git add $OUTPUT_FILE
-git commit -m "Database backup on $(date +'%Y-%m-%d')"
+if [ $? -eq 0 ]; then
+    echo "Database backed up in server/backups/$OUTPUT_FILE_PATH"
+else
+    echo "Database backup failed."
+fi
